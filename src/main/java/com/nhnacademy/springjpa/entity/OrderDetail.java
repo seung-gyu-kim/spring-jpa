@@ -57,11 +57,11 @@ public class OrderDetail {
     @Column(name = "thumbnail_image_url")
     private String thumbnailImageUrl;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "order_id")
     Order order;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "product_id")
     Product product;
 }

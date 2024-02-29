@@ -31,24 +31,24 @@ class OrderDetailRepositoryTest {
     @Test
     void findById() {
         System.out.println("------------------------------------------------------------");
-//        orderDetailRepository.findById(1);
-        System.out.println(orderDetailRepository.findById(1));
+        orderDetailRepository.findById(1);
+//        System.out.println(orderDetailRepository.findById(1));
         System.out.println("------------------------------------------------------------");
     }
 
     @Test
     void findAllByOrderId() {
         System.out.println("------------------------------------------------------------");
-//        orderDetailRepository.findAllByOrderId(1);
-        System.out.println(orderDetailRepository.findAllByOrderId(1));
+        orderDetailRepository.findAllByOrderId(1);
+//        System.out.println(orderDetailRepository.findAllByOrderId(1));
         System.out.println("------------------------------------------------------------");
     }
 
     @Test
     void findAllById() {
         System.out.println("------------------------------------------------------------");
-//        orderDetailRepository.findAllById(List.of(1));
-        System.out.println(orderDetailRepository.findAllById(List.of(1)));
+        orderDetailRepository.findAllById(List.of(1));
+//        System.out.println(orderDetailRepository.findAllById(List.of(1)));
         System.out.println("------------------------------------------------------------");
     }
 
@@ -56,7 +56,7 @@ class OrderDetailRepositoryTest {
     @DisplayName("N + 1 해결 : JPQL join fetch")
     void findAllByOrderIdWithJPQLJoinFetch() {
         System.out.println("------------------------------------------------------------");
-        System.out.println(orderDetailRepository.findAllByOrderIdWithJPQLJoinFetch(1));
+        orderDetailRepository.findAllByOrderIdWithJPQLJoinFetch(1);
         System.out.println("------------------------------------------------------------");
     }
 
@@ -64,7 +64,7 @@ class OrderDetailRepositoryTest {
     @DisplayName("N + 1 해결 : EntityGraph")
     void getAllByOrderId() {
         System.out.println("------------------------------------------------------------");
-        System.out.println(orderDetailRepository.getAllByOrderId(1));
+        orderDetailRepository.getAllByOrderId(1);
         System.out.println("------------------------------------------------------------");
     }
 
@@ -72,7 +72,7 @@ class OrderDetailRepositoryTest {
     @DisplayName("N + 1 해결 : Querydsl fetch join")
     void findAllByOrderIdWithQueryDslFetchJoin() {
         System.out.println("------------------------------------------------------------");
-        System.out.println(orderDetailRepository.findAllByOrderIdWithQuerydslFetchJoin(1));
+        orderDetailRepository.findAllByOrderIdWithQuerydslFetchJoin(1);
         System.out.println("------------------------------------------------------------");
     }
 }
