@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table >
+        <tr>
+            <th>상품 이름</th>
+            <th>가격</th>
+            <th>한 줄 설명</th>
+            <th>섬네일</th>
+        </tr>
+        <tr th:each="product, status: ${products}", th:object="${product}">
+            <td><a th:href="@{/{id}(id=*{id})}" th:text="*{name}" /></td>
+            <td th:text="*{cost}"></td>
+            <td th:text="*{desc}"></td>
+            <td th:text="*{thumb}"></td>
+        </tr>
+    </table>
+</body>
+</html>

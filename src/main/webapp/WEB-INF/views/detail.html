@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table th:object="${product}">
+        <tr>
+            <th>상품 이름</th>
+            <td th:text="*{productName}"></td>
+        </tr>
+        <tr>
+            <th>가격</th>
+            <td th:text="*{productUnitCost}"></td>
+        </tr>
+        <tr>
+            <th>한 줄 설명</th>
+            <td th:text="*{productShortDesc}"></td>
+        </tr>
+        <tr>
+            <th>상세설명</th>
+            <td th:text="*{productDesc}"></td>
+        </tr>
+        <tr>
+            <th>재고 수량</th>
+            <td th:text="*{productQuantity}"></td>
+        </tr>
+        <tr>
+            <th>상세 이미지</th>
+            <td th:text="*{detailImageUrl}"></td>
+        </tr>
+        <tr>
+            <th>섬네일 이미지</th>
+            <td th:text="*{thumbnailImageUrl}"></td>
+        </tr>
+    </table>
+</body>
+</html>
